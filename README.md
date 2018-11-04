@@ -1,3 +1,7 @@
+Open FlightReservationClasses.xml in draw.io
+
+Implement Gulp, BrowserSync, sass
+
 Create flight ticket;
 1) ID
 2) Name
@@ -18,7 +22,7 @@ View flights;
 Update flight;
 Delete flight;
 
-View available flight reservation;
+View available seats;
 View flight reservations;
 
 Create endpoints to return:
@@ -37,16 +41,16 @@ third microservice:
 9) links to partner's insurance companies
 
 
-Domain: Flight
+Domain: flight
 Resources: Reservation, Luggage, Amenity
 Versions: v1
 
 second microservice
-Domain: Plane
+Domain: plane
 Resources: Brief, Description
 Versions: v1
 
-Domain: Pilot
+Domain: pilot
 Resource: Brief, Biography
 Version: v11
 
@@ -59,6 +63,4 @@ Domain: Insurance
 Resource: Companies
 Version: v1
 
-
-??? ??????? ?? ??? ?????? ??????
-
+Check how to implement tokens.
