@@ -1,21 +1,19 @@
 package com.metaglobal.flights.flightreservatorspringboot.model.response;
 
-import com.metaglobal.flights.flightreservatorspringboot.model.Links;
+import java.time.LocalDate;
 
 public class ReservationResponse {
-
     private Long id;
-    private Integer price;
-    private String seatNumber;
-
-    private Links links;
+    private LocalDate departureDate;
+    private String destinationCountry;
 
     public ReservationResponse() {
+        super();
     }
 
-    public ReservationResponse(Integer price, String seatNumber) {
-        this.price = price;
-        this.seatNumber = seatNumber;
+    public ReservationResponse(LocalDate departureDate, String destinationCountry) {
+        this.departureDate = departureDate;
+        this.destinationCountry = destinationCountry;
     }
 
     public Long getId() {
@@ -26,27 +24,19 @@ public class ReservationResponse {
         this.id = id;
     }
 
-    public Integer getPrice() {
-        return price;
+    public LocalDate getDepartureDate() {
+        return departureDate;
     }
 
-    public void setPrice(Integer price) {
-        this.price = price;
+    public void setDepartureDate(LocalDate departureDate) {
+        this.departureDate = departureDate;
     }
 
-    public String getSeatNumber() {
-        return seatNumber;
+    public String getDestinationCountry() {
+        return destinationCountry;
     }
 
-    public void setSeatNumber(String seatNumber) {
-        this.seatNumber = seatNumber;
-    }
-
-    public Links getLinks() {
-        return links;
-    }
-
-    public void setLinks(Links links) {
-        this.links = links;
+    public void setDestinationCountry(String destinationCountry) {
+        this.destinationCountry = destinationCountry;
     }
 }

@@ -7,6 +7,7 @@ import java.time.LocalDate;
 public class ReservationRequest {
 
     private Long id;
+    private Long flightId;
     private String destinationcountry;
     private String departurecountry;
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
@@ -16,12 +17,19 @@ public class ReservationRequest {
         super();
     }
 
-    public ReservationRequest(Long id, LocalDate departuredate, String departurecountry, String destinationcountry) {
-        super();
-        this.id = id;
-        this.departuredate = departuredate;
-        this.departurecountry = departurecountry;
+    public ReservationRequest(Long flightId, String destinationcountry, String departurecountry, LocalDate departuredate) {
+        this.flightId = flightId;
         this.destinationcountry = destinationcountry;
+        this.departurecountry = departurecountry;
+        this.departuredate = departuredate;
+    }
+
+    public Long getFlightId() {
+        return flightId;
+    }
+
+    public void setFlightId(Long flightId) {
+        this.flightId = flightId;
     }
 
     public Long getId() {
